@@ -2,6 +2,30 @@ Header:
   Type: ITEM_DB
   Version: 1
 Body:
+  - Id: 50000
+    AegisName: Cash_Coin_1
+    Name: Cash Coin 1
+    Type: Usable
+    Script: |
+      callfunc("AddCash",1);
+  - Id: 50001
+    AegisName: Cash_Coin_10
+    Name: Cash Coin 10
+    Type: Usable
+    Script: |
+      callfunc("AddCash",10);
+  - Id: 50002
+    AegisName: Cash_Coin_100
+    Name: Cash Coin 100
+    Type: Usable
+    Script: |
+      callfunc("AddCash",100);
+  - Id: 50003
+    AegisName: Cash_Coin_1000
+    Name: Cash Coin 1000
+    Type: Usable
+    Script: |
+      callfunc("AddCash",1000);
   - Id: 9001
     AegisName: Poring_Egg
     Name: Poring Egg
@@ -17395,30 +17419,149 @@ Body:
       BuyingStore: true
     Script: |
       bonus5 bAutoSpellWhenHit,"SO_FIREWALK",5,35,BF_WEAPON,0;      bonus5 bAutoSpellWhenHit,"SO_ELECTRICWALK",5,80,BF_MAGIC,0;      autobonus "{ bonus bFlee,200; }",30,10000,BF_WEAPON,"{ specialeffect2 EF_TEIHIT1; }";      autobonus "{ bonus bSpeedRate,25; }",25,10000,BF_MAGIC,"{ specialeffect2 EF_POTION_BERSERK; }";
-  - Id: 50000
-    AegisName: Cash_Coin_1
-    Name: Cash Coin 1
-    Type: Usable
+  - Id: 300127
+    AegisName: aegis_300127
+    Name: Wolf Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+  - Id: 300128
+    AegisName: aegis_300128
+    Name: Wolf Lugenburg Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
     Script: |
-      callfunc("AddCash",1);
-  - Id: 50001
-    AegisName: Cash_Coin_10
-    Name: Cash Coin 10
-    Type: Usable
+      bonus2 bAddRace,RC_Insect,15;      bonus2 bMagicAddRace,RC_Insect,15;
+  - Id: 300129
+    AegisName: aegis_300129
+    Name: Poe Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+  - Id: 300130
+    AegisName: aegis_300130
+    Name: Poe Richard Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+  - Id: 300140
+    AegisName: aegis_300140
+    Name: Deep Sea Sropho Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
     Script: |
-      callfunc("AddCash",10);
-  - Id: 50002
-    AegisName: Cash_Coin_100
-    Name: Cash Coin 100
-    Type: Usable
+      .@r = getrefine();      bonus2 bMagicAtkEle,Ele_Wind,3;      if (.@r>=9) {         bonus2 bMagicAtkEle,Ele_Wind,2;      }      if (.@r>=11) {         bonus2 bMagicAtkEle,Ele_Wind,5;      }
+  - Id: 300141
+    AegisName: aegis_300141
+    Name: Deep Sea Obeaune Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Accessory: true
+      Left_Accessory: true
     Script: |
-      callfunc("AddCash",100);
-  - Id: 50003
-    AegisName: Cash_Coin_1000
-    Name: Cash Coin 1000
-    Type: Usable
+      bonus bMatk,30;
+  - Id: 300142
+    AegisName: aegis_300142
+    Name: Deep Sea Deviace Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
     Script: |
-      callfunc("AddCash",1000);
+      .@r = getrefine();      bonus2 bAddRace,RC_Fish,5;      bonus2 bAddEle,Ele_Water,5;      if (.@r>=7) {         bonus2 bAddEle,Ele_Water,5;      }      if (.@r>=9) {         bonus2 bAddRace,RC_Fish,5;      }
+  - Id: 300143
+    AegisName: aegis_300143
+    Name: Deep Sea Marse Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Script: |
+      bonus2 bSubEle,Ele_Earth,15;      bonus2 bSubRace,RC_Insect,15;
+  - Id: 300144
+    AegisName: aegis_300144
+    Name: Deep Sea Merman Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Shoes: true
+    Script: |
+      bonus bBaseAtk,4*(readparam(bStr)/15);
+  - Id: 300145
+    AegisName: aegis_300145
+    Name: Deep Sea Witch Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Garment: true
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Fire,100;      bonus2 bMagicAtkEle,Ele_Dark,100;      bonus2 bSubEle,Ele_All,-30;
+  - Id: 300146
+    AegisName: aegis_300146
+    Name: Deep Sea Sedora Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Script: |
+      bonus2 bCriticalAddRace,RC_Fish,30;
+  - Id: 300147
+    AegisName: aegis_300147
+    Name: Deep Sea Swordfish Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Head_Top: true
+      Head_Mid: true
+      Head_Low: true
+    Script: |
+      bonus2 bSubEle,Ele_Water,10;      if (getrefine()>=9) {         bonus2 bMagicAddEle,Ele_Water,10;      }
+  - Id: 300148
+    AegisName: aegis_300148
+    Name: Deep Sea Strouf Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Armor: true
+    Script: |
+      bonus bMaxHPrate,10;      bonus bMaxSPrate,5;      if (getrefine()>=9) {         bonus2 bMagicAddEle,Ele_Water,5;         bonus2 bAddEle,Ele_Water,5;      }
+  - Id: 300149
+    AegisName: aegis_300149
+    Name: Deep Sea Phen Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Garment: true
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,15;      bonus2 bMagicAtkEle,Ele_Wind,3*getrefine();
+  - Id: 300150
+    AegisName: aegis_300150
+    Name: Deep Sea King Dramoh Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Head_Top: true
+      Head_Mid: true
+      Head_Low: true
+    Script: |
+      bonus bMaxHPrate,-5;      bonus2 bAddClass,Class_All,(getrefine()/3);
+  - Id: 300151
+    AegisName: aegis_300151
+    Name: Deep Sea Kraken Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Script: |
+      bonus bLongAtkRate,25;      bonus bPerfectHitRate,5;
   - Id: 500
     AegisName: Choko_Gangjeong
     Name: Choko Gangjeong
