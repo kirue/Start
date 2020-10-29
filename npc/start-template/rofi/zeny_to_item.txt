@@ -19,7 +19,8 @@ prontera,163,203,5	script	Zeny แลก Item	562,{
 		mes "---";
 		mes "เลข Item หาจากไหน";
 		mes "<URL>Link 1<INFO>https://www.divine-pride.net/database/item</INFO></URL>";
-		mes "<URL>Link 2<INFO>https://raw.githubusercontent.com/kaninhot004/Start/rofi/db/re/item_db.txt</INFO></URL>";
+		mes "<URL>Link 2 (Equipment)<INFO>https://raw.githubusercontent.com/kaninhot004/Start/rofi/db/re/item_db_equip.yml</INFO></URL>";
+		mes "<URL>Link 3 (Card)<INFO>https://raw.githubusercontent.com/kaninhot004/Start/rofi/db/re/item_db_usable.yml</INFO></URL>";
 		
 		
 		next;
