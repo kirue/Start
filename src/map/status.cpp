@@ -2042,6 +2042,14 @@ int status_damage(struct block_list *src,struct block_list *target,int64 dhp, in
 	}
 
 	status->hp = 0;
+
+	// [Start] Dummy invincible
+	short mob_id = ((struct mob_data*)target)->mob_id;
+	if (target->type == BL_MOB && (mob_id == 2409 || mob_id == 2410 || mob_id == 2411)) {
+		status->hp = status->max_hp;
+		return (int)(hp + sp);
+	}
+
 	/** [Skotlex]
 	* NOTE: These dead functions should return:
 	* 0: Death cancelled, auto-revived.
