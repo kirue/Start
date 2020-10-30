@@ -2,6 +2,30 @@ Header:
   Type: ITEM_DB
   Version: 1
 Body:
+  - Id: 50000
+    AegisName: Cash_Coin_1
+    Name: Cash Coin 1
+    Type: Usable
+    Script: |
+      callfunc("AddCash",1);
+  - Id: 50001
+    AegisName: Cash_Coin_10
+    Name: Cash Coin 10
+    Type: Usable
+    Script: |
+      callfunc("AddCash",10);
+  - Id: 50002
+    AegisName: Cash_Coin_100
+    Name: Cash Coin 100
+    Type: Usable
+    Script: |
+      callfunc("AddCash",100);
+  - Id: 50003
+    AegisName: Cash_Coin_1000
+    Name: Cash Coin 1000
+    Type: Usable
+    Script: |
+      callfunc("AddCash",1000);
   - Id: 9001
     AegisName: Poring_Egg
     Name: Poring Egg
